@@ -42,9 +42,9 @@ export class AuthorizationService {
         .then(response => response.json());
     }
 
-    revoke(token: AccessToken): {} {
-        throw Error('Not Implemented');
-        //return {};
+    revoke(token: AccessToken): Promise<{}> {
+        return this.client.post('https://api.annict.com/oauth/revoke', { token: token.access_token })
+        .then(response => response.json());
     }
 
 }
