@@ -3,9 +3,25 @@
         "module": "commonjs",
         "target": "es5",
         "noImplicitAny": false,
-        "sourceMap": false
+        "sourceMap": false,
+        "rootDir": "src",
+        "outDir": "lib"
     },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./typings/main.d.ts"
+    ],
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "files": [
+        "./src/annict.ts",
+        "./src/services/episodes-service.ts",
+        "./src/services/me-service.ts",
+        "./src/services/records-service.ts",
+        "./src/services/works-service.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
