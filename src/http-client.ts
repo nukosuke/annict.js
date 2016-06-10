@@ -20,7 +20,7 @@ export class HttpClient {
         this.headers[key] = value;
     }
 
-    get( url: string, query?: {[key:string]: string} ): Promise<IResponse> {
+    get( url: string, query?: {[key:string]: any} ): Promise<IResponse> {
         //TODO: make querystring
         return fetch(url, {
             method : 'GET',
