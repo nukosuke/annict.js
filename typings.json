@@ -3,6 +3,7 @@
   "dependencies": {},
   "ambientDependencies": {},
   "globalDependencies": {
-    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160524142046"
+    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160524142046",
+    "qs": "registry:dt/qs#0.0.0+20160317120654"
   }
 }
