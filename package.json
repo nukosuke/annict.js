@@ -5,6 +5,7 @@
   "main": "lib/annict.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/tsc -p tsconfig.json",
     "prepublish": "./node_modules/.bin/tsc -p tsconfig.json"
   },
   "repository": {
