@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/nukosuke/node-annict/issues"
   },
-  "homepage": "https://github.com/nukosuke/node-annict#readme"
+  "homepage": "https://github.com/nukosuke/node-annict#readme",
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
 }
