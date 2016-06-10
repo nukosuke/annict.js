@@ -1,5 +1,5 @@
 {
-  "name": "node-annict",
+  "name": "annict",
   "version": "0.0.0",
   "description": "Annict API client library",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nukosuke/node-annict.git"
+    "url": "git+ssh://git@github.com/nukosuke/annict.js.git"
   },
   "keywords": [
     "anime",
@@ -19,9 +19,9 @@
   "author": "nukosuke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nukosuke/node-annict/issues"
+    "url": "https://github.com/nukosuke/annict.js/issues"
   },
-  "homepage": "https://github.com/nukosuke/node-annict#readme",
+  "homepage": "https://github.com/nukosuke/annict.js#readme",
   "devDependencies": {
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
