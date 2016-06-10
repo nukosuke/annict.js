@@ -23,6 +23,7 @@
         "./src/services/me-service.ts",
         "./src/services/records-service.ts",
         "./src/services/works-service.ts",
+        "./src/string-literal.ts",
         "./typings/index.d.ts"
     ],
     "atom": {

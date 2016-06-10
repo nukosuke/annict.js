@@ -1,5 +1,6 @@
 import { Promise }    from 'es6-promise';
 import { HttpClient } from '../http-client';
+import { Scope }      from '../string-literal';
 
 interface AccessToken {
     access_token : string
@@ -11,7 +12,7 @@ interface AccessToken {
 
 interface AccessTokenInfo {
     resource_owner_id  : number
-    scopes             : string[]
+    scopes             : Scope[]
     expires_in_seconds : number
     application        : {uid: string}
     created_at         : number
