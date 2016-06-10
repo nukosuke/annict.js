@@ -9,7 +9,7 @@
     },
     "filesGlob": [
         "./src/**/*.ts",
-        "./typings/main.d.ts"
+        "./typings/index.d.ts"
     ],
     "exclude": [
         "node_modules"
@@ -20,7 +20,8 @@
         "./src/services/index.ts",
         "./src/services/me-service.ts",
         "./src/services/records-service.ts",
-        "./src/services/works-service.ts"
+        "./src/services/works-service.ts",
+        "./typings/index.d.ts"
     ],
     "atom": {
         "rewriteTsconfig": true
