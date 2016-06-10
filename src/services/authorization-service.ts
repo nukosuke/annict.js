@@ -26,15 +26,15 @@ export class AuthorizationService {
     }
 
     token(
-        client_id     : string,
-        client_secret : string,
-        grant_type    : string,
-        redirect_uri  : string,
-        code          : string ): Promise<AccessToken> {
-          return this.client.post('https://api.annict.com/oauth/token', {
-            client_id, client_secret, grant_type, redirect_uri, code
-          })
-          .then(response => response.json());
+      client_id     : string,
+      client_secret : string,
+      grant_type    : string,
+      redirect_uri  : string,
+      code          : string ): Promise<AccessToken> {
+        return this.client.post('https://api.annict.com/oauth/token', {
+          client_id, client_secret, grant_type, redirect_uri, code
+        })
+        .then(response => response.json());
     }
 
     info(): Promise<AccessTokenInfo> {
