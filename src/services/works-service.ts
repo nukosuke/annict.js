@@ -1,6 +1,7 @@
 import { HttpClient } from '../http-client';
+import { Order }      from '../string-literal';
 
-interface Work {
+export interface Work {
     id                : number
     title             : string
     title_kana        : string
@@ -18,9 +19,7 @@ interface Work {
     watchers_count    : number
 }
 
-type Order = 'asc' | 'desc'
-
-interface RequestQuery {
+export interface WorksRequestQuery {
     fields              : string[]
     filter_ids          : number[]
     filter_season       : string[]
@@ -32,7 +31,19 @@ interface RequestQuery {
     sort_watchers_count : Order
 }
 
+export interface WorksResponse {
+    works       : Work[]
+    total_count : number
+    next_page   : number | null
+    prev_page   : number | null
+}
+
 export class WorksService {
     constructor( private client: HttpClient ) {
+    }
+
+    get(query?: WorksRequestQuery): Promise<WorksResponse> {
+        return this.client.get('https://api.annict.com/v1/works', query)
+        .then(response => response.json());
     }
 }
