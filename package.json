@@ -2,9 +2,10 @@
   "name": "annict",
   "version": "0.0.0",
   "description": "Annict API client library",
-  "main": "index.js",
+  "main": "lib/annict.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "./node_modules/.bin/tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
