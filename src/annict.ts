@@ -7,7 +7,7 @@ import {
   //MeService
 } from './services';
 
-export class Annict {
+export default class Annict {
   public client : HttpClient
   public oauth  : AuthorizationService
   //public  works     : WorksService
