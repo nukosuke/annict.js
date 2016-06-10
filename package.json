@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/nukosuke/node-annict#readme",
   "devDependencies": {
-    "typescript": "^1.8.10"
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"

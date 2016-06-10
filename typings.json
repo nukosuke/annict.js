@@ -1,4 +1,8 @@
 {
   "name": "node-annict",
-  "dependencies": {}
+  "dependencies": {},
+  "ambientDependencies": {},
+  "globalDependencies": {
+    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160524142046"
+  }
 }
