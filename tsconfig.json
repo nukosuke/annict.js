@@ -17,6 +17,7 @@
     "files": [
         "./src/annict.ts",
         "./src/services/episodes-service.ts",
+        "./src/services/index.ts",
         "./src/services/me-service.ts",
         "./src/services/records-service.ts",
         "./src/services/works-service.ts"
