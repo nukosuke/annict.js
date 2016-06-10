@@ -6,10 +6,10 @@ import * as qs     from 'qs';
  * wrapper class of fetch API
  */
 export class HttpClient {
-    private headers: {} = {
-      'Accept'       : 'application/json',
-      'Content-Type' : 'application/json',
-      'User-Agent'   : 'annict.js',
+    private headers: {[index:string]: string} = {
+        'Accept'       : 'application/json',
+        'Content-Type' : 'application/json',
+        'User-Agent'   : 'annict.js',
     }
 
     getHeader( key: string ): string {
