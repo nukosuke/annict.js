@@ -10,8 +10,8 @@ export interface Episode {
     title         : string
     records_count : number
     work?         : Work
-    prev_episode? : Episode | null
-    next_episode? : Episode | null
+    prev_episode? : Episode
+    next_episode? : Episode
 }
 
 export interface EpisodesRequestQuery {
@@ -27,8 +27,8 @@ export interface EpisodesRequestQuery {
 export interface EpisodesResponse {
     episodes: Episode[]
     total_count : number
-    next_page   : number | null
-    prev_page   : number | null
+    next_page   : number
+    prev_page   : number
 }
 
 export class EpisodesService {

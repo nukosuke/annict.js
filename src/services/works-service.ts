@@ -34,8 +34,8 @@ export interface WorksRequestQuery {
 export interface WorksResponse {
     works       : Work[]
     total_count : number
-    next_page   : number | null
-    prev_page   : number | null
+    next_page   : number
+    prev_page   : number
 }
 
 export class WorksService {
