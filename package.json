@@ -1,6 +1,6 @@
 {
   "name": "annict",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Annict API client library",
   "main": "lib/annict.js",
   "scripts": {
