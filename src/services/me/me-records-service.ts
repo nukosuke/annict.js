@@ -14,7 +14,7 @@ export interface MeRecordCreateRequestQuery {
 export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery
 export type MeRecordCreateResponse     = Record
 export type MeRecordUpdateResponse     = Record
-//export type MeRecordDeleteResponse     = IResponse
+export type MeRecordDeleteResponse     = IResponse
 
 export class MeRecordsService {
     constructor( private client: HttpClient ) {
@@ -30,9 +30,7 @@ export class MeRecordsService {
         .then(response => response.json());
     }
 
-    /*
     delete( id: RecordId ): Promise<MeRecordDeleteResponse> {
-
+        return this.client.delete(`https://api.annict.com/v1/me/records/${id}`);
     }
-    */
 }
