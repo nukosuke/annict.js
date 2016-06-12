@@ -21,7 +21,9 @@ export class HttpClient {
     }
 
     get( url: string, query?: {[key:string]: any} ): Promise<IResponse> {
-        //TODO: make querystring
+        if (query) {
+            url += '?' + qs.stringify(query, { arrayFormat: 'repeat' });
+        }
         return fetch(url, {
             method : 'GET',
             headers: this.headers
