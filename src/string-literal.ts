@@ -4,7 +4,7 @@ export type Scope =
 export type Order =
   'asc' | 'desc'
 
-export type Boolean =
+export type BooleanString =
   'true' | 'false'
 
 export type Media =
