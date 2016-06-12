@@ -8,19 +8,19 @@ import {
 } from './services';
 
 export default class Annict {
-  public client   : HttpClient
-  public oauth    : AuthorizationService
-  public works    : WorksService
-  public episodes : EpisodesService
-  public records  : RecordsService
-  public me       : MeService
+  public client  : HttpClient
+  public OAuth   : AuthorizationService
+  public Work    : WorksService
+  public Episode : EpisodesService
+  public Record  : RecordsService
+  public Me      : MeService
 
   constructor() {
-      this.client   = new HttpClient();
-      this.oauth    = new AuthorizationService( this.client );
-      this.works    = new WorksService        ( this.client );
-      this.episodes = new EpisodesService     ( this.client );
-      this.records  = new RecordsService      ( this.client );
-      this.me       = new MeService           ( this.client );
+      this.client  = new HttpClient();
+      this.OAuth   = new AuthorizationService( this.client );
+      this.Work    = new WorksService        ( this.client );
+      this.Episode = new EpisodesService     ( this.client );
+      this.Record  = new RecordsService      ( this.client );
+      this.Me      = new MeService           ( this.client );
   }
 }
