@@ -1,3 +1,7 @@
+[![npm version](https://badge.fury.io/js/annict.svg)](https://badge.fury.io/js/annict)
+[![Dependency Status](https://david-dm.org/nukosuke/annict.js.svg)](https://david-dm.org/nukosuke/annict.js)
+[![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
+
 # annict.js
 アニメ視聴記録サービスAnnictのAPIクライアントライブラリです。
 
