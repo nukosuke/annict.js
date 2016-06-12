@@ -4,7 +4,7 @@ import {
   WorksService,
   EpisodesService,
   RecordsService,
-  //MeService
+  MeService
 } from './services';
 
 export default class Annict {
@@ -13,7 +13,7 @@ export default class Annict {
   public works    : WorksService
   public episodes : EpisodesService
   public records  : RecordsService
-  //public  me        : MeService
+  public me       : MeService
 
   constructor() {
       this.client   = new HttpClient();
@@ -21,6 +21,6 @@ export default class Annict {
       this.works    = new WorksService        ( this.client );
       this.episodes = new EpisodesService     ( this.client );
       this.records  = new RecordsService      ( this.client );
-      //this.me       = new MeService           ( this.client );
+      this.me       = new MeService           ( this.client );
   }
 }
