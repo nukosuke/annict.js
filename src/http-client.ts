@@ -37,4 +37,12 @@ export class HttpClient {
             body   : JSON.stringify( body )
         });
     }
+
+    patch( url: string, body: any ): Promise<IResponse> {
+        return fetch(url, {
+            method : 'PATCH',
+            headers: this.headers,
+            body   : JSON.stringify( body )
+        });
+    }
 }
