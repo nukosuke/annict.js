@@ -1,6 +1,9 @@
 # annict.js
 アニメ視聴記録サービスAnnictのAPIクライアントライブラリです。
 
+- [Annict](https://annict.com/)
+- [Annict API](https://annict.wikihub.io/)
+
 ## インストール
 ```
 npm install annict --save
@@ -20,7 +23,7 @@ annict.oauth.token(
   CODE
 )
 .then(token => {
-  
+
   annict.client.setHeader('Authorization', `Bearer ${token.access_token}`);
 
   annict.works.get({ filter_title: 'shirobako' })
