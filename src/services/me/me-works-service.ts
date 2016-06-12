@@ -1,5 +1,5 @@
-import { HttpClient }    from '../../http-client';
-import { Order, Status } from '../../string-literal';
+import { HttpClient }       from '../../http-client';
+import { Order, Status }    from '../../string-literal';
 import { WorksGetResponse } from '../works-service';
 
 export interface MeWorksGetRequestQuery {
@@ -15,11 +15,13 @@ export interface MeWorksGetRequestQuery {
     sort_watchers_count : Order
 }
 
+type MeWorksGetResponse = WorksGetResponse
+
 export class MeWorksService {
     constructor( private client: HttpClient ) {
     }
 
-    get( query: MeWorksGetRequestQuery ): Promise<WorksGetResponse> {
+    get( query: MeWorksGetRequestQuery ): Promise<MeWorksGetResponse> {
         return this.client.get('https://api.annict.com/v1/me/works', query)
         .then(response => response.json());
     }
