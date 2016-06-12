@@ -45,4 +45,11 @@ export class HttpClient {
             body   : JSON.stringify( body )
         });
     }
+
+    delete( url: string ): Promise<IResponse> {
+        return fetch(url, {
+            method: 'DELETE',
+            headers: this.headers
+        });
+    }
 }
