@@ -14,7 +14,7 @@ export interface Episode {
     next_episode? : Episode
 }
 
-export interface EpisodesRequestQuery {
+export interface EpisodesGetRequestQuery {
     fields           : string[]
     filter_ids       : number[]
     filter_work_id   : number
@@ -24,7 +24,7 @@ export interface EpisodesRequestQuery {
     sort_sort_number : Order
 }
 
-export interface EpisodesResponse {
+export interface EpisodesGetResponse {
     episodes: Episode[]
     total_count : number
     next_page   : number
@@ -35,7 +35,7 @@ export class EpisodesService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query: EpisodesRequestQuery): Promise<EpisodesResponse> {
+    get(query: EpisodesGetRequestQuery): Promise<EpisodesGetResponse> {
         return this.client.get('https://api.annict.com/v1/episodes', query)
         .then(response => response.json());
     }

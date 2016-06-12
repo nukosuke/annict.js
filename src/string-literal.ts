@@ -4,6 +4,9 @@ export type Scope =
 export type Order =
   'asc' | 'desc'
 
+export type BooleanString =
+  'true' | 'false'
+
 export type Media =
   'tv' | 'ova' | 'movie' | 'web' | 'other'
 
