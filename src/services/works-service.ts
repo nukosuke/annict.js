@@ -1,8 +1,10 @@
 import { HttpClient } from '../http-client';
 import { Order }      from '../string-literal';
 
+export type WorkId = number
+
 export interface Work {
-    id                : number
+    id                : WorkId
     title             : string
     title_kana        : string
     media             : string
