@@ -1,5 +1,6 @@
 import { HttpClient } from '../../http-client';
 import { Record }     from '../records-service';
+import { Boolean }    from '../../string-literal';
 
 export type RecordId = number
 
@@ -7,8 +8,8 @@ export interface MeRecordCreateRequestQuery {
     episode_id     : number
     comment        : string
     rating         : number
-    share_twitter  : boolean
-    share_facebook : boolean
+    share_twitter  : Boolean
+    share_facebook : Boolean
 }
 
 export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery
