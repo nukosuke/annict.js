@@ -1,54 +1,19 @@
 import { HttpClient }          from '../http-client';
-import { Order, Status }       from '../string-literal';
-import { Record }              from './records-service';
-import { Work, WorksResponse } from './works-service';
-
-export interface MeStatusesRequestQuery {
-    work_id : number
-    kind    : Status
-}
-/*
-export interface MeRecordsRequestQuery {
-    episode_id     : number
-    comment        : string
-    rating         : number
-    share_twitter  : boolean
-    share_facebook : boolean
-}
-*/
-export interface MeWorksRequestQuery {
-    fields              : string[]
-    filter_ids          : number[]
-    filter_season       : string[]
-    filter_title        : string
-    filter_status       : Status
-    page                : number
-    per_page            : number
-    sort_id             : Order
-    sort_season         : Order
-    sort_watchers_count : Order
-}
+import { MeStatusesService }   from './me/me-statuses-service';
+import { MeRecordsService }    from './me/me-records-service';
+import { MeWorksService }      from './me/me-works-service';
+//import { MeProgramsService }   from './me/me-programs-service';
 
 export class MeService {
-    constructor( private client: HttpClient ) {
-    }
+    public Status  : MeStatusesService
+    public Record  : MeRecordsService
+    public Work    : MeWorksService
+    //public Program : MeProgramService
 
-    statuses( query: MeStatusesRequestQuery ): Promise<IResponse> {
-        return this.client.post('https://api.annict.com/v1/me/statuses', query);
+    constructor( private client: HttpClient ) {
+        this.Status  = new MeStatusesService( client );
+        this.Record  = new MeRecordsService ( client );
+        this.Work    = new MeWorksService   ( client );
+        //this.Program = new MeProgramsService( client );
     }
-/*
-    records( query: MeRecordsRequestQuery ): Promise<Record> {
-        return this.client.post('https://api.annict.com/v1/me/records', query)
-        .then(response => response.json());
-    }
-*/
-    works( query: MeWorksRequestQuery ): Promise<WorksResponse> {
-        return this.client.get('https://api.annict.com/v1/me/works', query)
-        .then(response => response.json());
-    }
-/*
-    programs( query ) {
-        return this.client.post('', query);
-    }
-*/
 }
