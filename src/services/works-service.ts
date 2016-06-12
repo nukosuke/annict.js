@@ -19,7 +19,7 @@ export interface Work {
     watchers_count    : number
 }
 
-export interface WorksRequestQuery {
+export interface WorksGetRequestQuery {
     fields              : string[]
     filter_ids          : number[]
     filter_season       : string[]
@@ -31,7 +31,7 @@ export interface WorksRequestQuery {
     sort_watchers_count : Order
 }
 
-export interface WorksResponse {
+export interface WorksGetResponse {
     works       : Work[]
     total_count : number
     next_page   : number
@@ -42,7 +42,7 @@ export class WorksService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query?: WorksRequestQuery): Promise<WorksResponse> {
+    get(query?: WorksGetRequestQuery): Promise<WorksGetResponse> {
         return this.client.get('https://api.annict.com/v1/works', query)
         .then(response => response.json());
     }

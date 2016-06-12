@@ -26,7 +26,7 @@ export interface Record {
     episode        : Episode
 }
 
-export interface RecordsRequestQuery {
+export interface RecordsGetRequestQuery {
     fields            : string[]
     filter_ids        : number[]
     filter_episode_id : number
@@ -36,7 +36,7 @@ export interface RecordsRequestQuery {
     sort_likes_count  : Order
 }
 
-export interface RecordsResponse {
+export interface RecordsGetResponse {
     records     : Record[]
     total_count : number
     next_page   : number
@@ -47,7 +47,7 @@ export class RecordsService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query?: RecordsRequestQuery): Promise<RecordsResponse> {
+    get(query?: RecordsGetRequestQuery): Promise<RecordsGetResponse> {
         return this.client.get('https://api.annict.com/v1/records', query)
         .then(response => response.json());
     }
