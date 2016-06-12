@@ -1,15 +1,13 @@
-import { HttpClient } from '../http-client';
-import { Order, Status }     from '../string-literal';
-//import { Status }     from '../string-literal';
-//import { Record }     from './records-service';
-import { Work, WorksResponse }       from './works-service';
+import { HttpClient }          from '../http-client';
+import { Order, Status }       from '../string-literal';
+import { Record }              from './records-service';
+import { Work, WorksResponse } from './works-service';
 
-/*
 export interface MeStatusesRequestQuery {
     work_id : number
     kind    : Status
 }
-
+/*
 export interface MeRecordsRequestQuery {
     episode_id     : number
     comment        : string
@@ -35,11 +33,10 @@ export class MeService {
     constructor( private client: HttpClient ) {
     }
 
-/*
     statuses( query: MeStatusesRequestQuery ): Promise<IResponse> {
         return this.client.post('https://api.annict.com/v1/me/statuses', query);
     }
-
+/*
     records( query: MeRecordsRequestQuery ): Promise<Record> {
         return this.client.post('https://api.annict.com/v1/me/records', query)
         .then(response => response.json());
