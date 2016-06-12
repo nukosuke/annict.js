@@ -1,6 +1,6 @@
 import { HttpClient }    from '../../http-client';
 import { Order, Status } from '../../string-literal';
-import { WorksResponse } from '../works-service';
+import { WorksGetResponse } from '../works-service';
 
 export interface MeWorksGetRequestQuery {
     fields              : string[]
@@ -19,7 +19,7 @@ export class MeWorksService {
     constructor( private client: HttpClient ) {
     }
 
-    get( query: MeWorksGetRequestQuery ): Promise<WorksResponse> {
+    get( query: MeWorksGetRequestQuery ): Promise<WorksGetResponse> {
         return this.client.get('https://api.annict.com/v1/me/works', query)
         .then(response => response.json());
     }
