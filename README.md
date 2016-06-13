@@ -3,10 +3,11 @@
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
 
 # annict.js
-アニメ視聴記録サービスAnnictのAPIクライアントライブラリです。
+アニメ視聴記録サービス[Annict](https://annict.com/)のAPIクライアントライブラリです。
 
-- [Annict](https://annict.com/)
-- [Annict API](https://annict.wikihub.io/)
+- [Annict APIドキュメント](https://annict.wikihub.io/)
+- [annict.jsドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
+
 
 ## インストール
 ```
