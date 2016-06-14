@@ -15,7 +15,7 @@ export interface MeWorksGetRequestQuery {
     sort_watchers_count : Order
 }
 
-type MeWorksGetResponse = WorksGetResponse
+export type MeWorksGetResponse = WorksGetResponse
 
 export class MeWorksService {
     constructor( private client: HttpClient ) {
