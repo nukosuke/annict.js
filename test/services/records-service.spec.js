@@ -1,5 +1,5 @@
 const RecordsService
-    = require('../../lib/services/works-service').RecordsService;
+    = require('../../lib/services/records-service').RecordsService;
 const HttpClient = require('../../lib/http-client').HttpClient;
 
 describe('records service', () => {
