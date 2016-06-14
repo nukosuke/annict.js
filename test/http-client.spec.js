@@ -18,7 +18,7 @@ describe('http client', () => {
             'delete'
         ]
         .forEach(func => {
-            expect(httpClient).to.have.property('getHeader')
+            expect(httpClient).to.have.property(func)
                 .that.is.a('function');
         });
         done();
