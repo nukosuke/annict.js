@@ -4,7 +4,7 @@
   "description": "Annict API client library",
   "main": "lib/annict.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -r ./test/globals",
+    "test": "./node_modules/.bin/mocha -r ./test/globals --recursive",
     "build": "./node_modules/.bin/tsc -p tsconfig.json",
     "postinstall": "./node_modules/.bin/typings install",
     "prepublish": "./node_modules/.bin/tsc -p tsconfig.json"
