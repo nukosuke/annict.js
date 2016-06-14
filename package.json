@@ -27,6 +27,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "karma": "^0.13.22",
+    "karma-mocha": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.0",
     "mocha": "^2.5.3",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
