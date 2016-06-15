@@ -8,6 +8,7 @@ describe('records service', () => {
 
     it('has correct members', done => {
         [
+            'client',
             'get',
         ]
         .forEach(prop => expect(Record).to.have.property(prop))

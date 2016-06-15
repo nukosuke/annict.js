@@ -13,7 +13,8 @@ describe('authorization service', () => {
             'token',
             'info',
             'revoke'
-        ].forEach(prop => expect(OAuth).to.have.property(prop));
+        ]
+        .forEach(prop => expect(OAuth).to.have.property(prop));
         done();
     });
 

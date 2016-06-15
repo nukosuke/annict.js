@@ -7,6 +7,7 @@ describe('works service', () => {
 
     it('has correct members', done => {
         [
+            'client',
             'get',
         ]
         .forEach(prop => expect(Work).to.have.property(prop))
