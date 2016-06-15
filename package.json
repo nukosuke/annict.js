@@ -4,8 +4,9 @@
   "description": "Annict API client library",
   "main": "lib/annict.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
     "build": "./node_modules/.bin/tsc -p tsconfig.json",
+    "postinstall": "./node_modules/.bin/typings install",
     "prepublish": "./node_modules/.bin/tsc -p tsconfig.json"
   },
   "repository": {
@@ -25,6 +26,12 @@
   },
   "homepage": "https://github.com/nukosuke/annict.js#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-mocha": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   },

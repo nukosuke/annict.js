@@ -22,6 +22,7 @@
         "./src/services/episodes-service.ts",
         "./src/services/index.ts",
         "./src/services/me-service.ts",
+        "./src/services/me/index.ts",
         "./src/services/me/me-programs-service.ts",
         "./src/services/me/me-records-service.ts",
         "./src/services/me/me-statuses-service.ts",
