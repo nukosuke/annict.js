@@ -2,7 +2,7 @@ import { Promise }    from 'es6-promise';
 import { HttpClient } from '../http-client';
 import { Scope }      from '../string-literal';
 
-interface AccessToken {
+export interface AccessToken {
     access_token : string
     token_type   : string
     expires_in   : number
@@ -10,7 +10,7 @@ interface AccessToken {
     created_at   : number
 }
 
-interface AccessTokenInfo {
+export interface AccessTokenInfo {
     resource_owner_id  : number
     scopes             : Scope[]
     expires_in_seconds : number
