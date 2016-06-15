@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Annict API client library",
   "main": "lib/annict.js",
+  "typings": "lib/annict.d.ts",
   "scripts": {
     "test": "./node_modules/.bin/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
     "build": "./node_modules/.bin/tsc -p tsconfig.json",
