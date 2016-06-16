@@ -10,32 +10,44 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'lib/**/*.js',
-      'test/**/*.spec.js'
+      'browser/**/*.js',
+      'browser-test/**/*.spec.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-      '**/*.md'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'browser-test/**/*.spec.js': ['babel']
+    },
+    babelPreprocessor: {
+        options: {
+            presets: ['es2015'],
+            sourceMap: 'inline'
+        },
+        filename: function(file) {
+            return file.originalPath.replace(/\.js$/, '.es5.js');
+        },
+        sourceFileName: function (file) {
+            return file.originalPath;
+        }
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -62,7 +74,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
