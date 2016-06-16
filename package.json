@@ -9,7 +9,7 @@
     "build": "npm run build:main && npm run build:browser",
     "build:main": "./node_modules/.bin/tsc -p tsconfig.json",
     "build:browser": "./node_modules/.bin/webpack -p",
-    "prepublish": "npm build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
