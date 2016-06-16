@@ -38,6 +38,7 @@
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.0.1",
+    "karma-mocha-reporter": "^2.0.4",
     "karma-phantomjs-launcher": "^1.0.0",
     "mocha": "^2.5.3",
     "phantomjs-prebuilt": "^2.1.7",
