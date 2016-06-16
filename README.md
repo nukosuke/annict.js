@@ -70,7 +70,7 @@ annict.OAuth.token(
 </body>
 ```
 
-## LICENSE
+## ライセンス
 Copyright (c) 2016 ぬこすけ  
-Released under the MIT license  
+本ソフトウェアはMITライセンスのもと配布します。  
 http://opensource.org/licenses/mit-license.php
