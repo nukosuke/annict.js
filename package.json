@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/nukosuke/annict.js#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "karma": "^0.13.22",
     "karma-babel-preprocessor": "^6.0.1",
