@@ -1,6 +1,9 @@
 import { Promise }    from 'es6-promise';
 import { HttpClient } from '../http-client';
 import { Scope }      from '../string-literal';
+import * as qs        from 'qs';
+
+declare const BROWSER : string;
 
 export interface AccessToken {
     access_token : string
@@ -22,8 +25,25 @@ export class AuthorizationService {
     constructor( private client: HttpClient ) {
     }
 
-    authorize() {
-        throw Error('Not Implemented');
+    authorize(
+      client_id     : string,
+      response_type : string   = 'code',
+      redirect_uri  : string   = 'urn:ietf:wg:oauth:2.0:oob',
+      scope         : string[] = ['read'] ) {
+        if(BROWSER) {
+            window.location.assign(
+                'https://api.annict.com/oauth/authorize?'
+                + qs.stringify({
+                    client_id,
+                    response_type,
+                    redirect_uri,
+                    scope: scope.join(' ')
+                })
+            );
+        }
+        else {
+            throw Error('Not Implemented');
+        }
     }
 
     token(
