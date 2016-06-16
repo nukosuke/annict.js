@@ -8,6 +8,7 @@
     "test": "./node_modules/.bin/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
     "build": "npm run build:main && npm run build:browser",
     "build:main": "./node_modules/.bin/tsc -p tsconfig.json",
+    "build:tsd": "./node_modules/.bin/tsc -p tsconfig.json -d",
     "build:browser": "./node_modules/.bin/webpack -p",
     "prepublish": "npm run build"
   },
