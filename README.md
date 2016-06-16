@@ -70,6 +70,10 @@ annict.OAuth.token(
 </body>
 ```
 
+### 認証メソッド
+Node.jsとブラウザで一部仕様できるメソッドに差があります。  
+https://github.com/nukosuke/annict.js/pull/25#issue-160690355
+
 ## ライセンス
 Copyright (c) 2016 ぬこすけ  
 本ソフトウェアはMITライセンスのもと配布します。  
