@@ -1,0 +1,25 @@
+{
+  "name": "annict",
+  "description": "Annict API client library",
+  "main": "browser/annict.min.js",
+  "authors": [
+    "nukosuke"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "anime",
+    "api",
+    "library",
+    "service"
+  ],
+  "homepage": "https://github.com/nukosuke/annict.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "typings",
+    "lib"
+  ]
+}
