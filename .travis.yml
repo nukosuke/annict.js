@@ -3,5 +3,7 @@ node_js:
     - "6"
     - "5"
     - "4"
+before_script:
+    - ./node_modules/.bin/typings install
 notifications:
     email: false
