@@ -15,6 +15,11 @@
 npm install annict --save
 ```
 
+ブラウザの場合
+```
+bowser install annict
+```
+
 ## 使い方
 詳しくは[ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)を参照してください。
 
