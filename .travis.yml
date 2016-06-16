@@ -4,6 +4,7 @@ node_js:
     - "5"
     - "4"
 before_script:
+    - npm install typings
     - ./node_modules/.bin/typings install
 notifications:
     email: false
