@@ -16,6 +16,10 @@ npm install annict --save
 ```
 
 ## 使い方
+詳しくは[ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)を参照してください。
+
+### Node.js
+
 ```js
 var Annict = require('annict').default;
 
@@ -47,6 +51,18 @@ annict.OAuth.token(
   .then(res => console.log);
 
 });
+```
+
+### ブラウザ
+
+```html
+<body>
+    ...
+    <script src='/js/annict.min.js'></script>
+    <script>
+        var annict = new Annict();
+    </script>
+</body>
 ```
 
 ## LICENSE
