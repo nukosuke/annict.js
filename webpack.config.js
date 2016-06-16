@@ -5,6 +5,8 @@ module.exports = {
     output: {
         filename: 'annict.min.js',
         path: './browser',
+        libraryTarget: 'var',
+        library: 'Annict'
     },
     resolve: {
         extensions: ['', '.js', '.ts']
