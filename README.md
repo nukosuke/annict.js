@@ -70,7 +70,6 @@ annict.OAuth.token(
 </body>
 ```
 
-### 認証メソッド
 Node.jsとブラウザで一部使用できるメソッドに差があります。  
 - https://github.com/nukosuke/annict.js/pull/25#issue-160690355
 
