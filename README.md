@@ -17,7 +17,7 @@ npm install annict --save
 
 ブラウザの場合
 ```
-bowser install annict
+bower install annict --save
 ```
 
 ## 使い方
