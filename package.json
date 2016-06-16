@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Annict API client library",
   "main": "lib/annict.js",
-  "browser": "browser/annict.min.js",
+  "browser": "lib/annict.js",
   "typings": "lib/annict.d.ts",
   "scripts": {
     "test": "npm run test:main && npm run test:browser",
