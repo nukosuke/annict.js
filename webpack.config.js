@@ -1,10 +1,12 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/annict.ts',
+    entry: './src/annict-browser.js',
     output: {
         filename: 'annict.min.js',
         path: './browser',
+        libraryTarget: 'var',
+        library: 'Annict'
     },
     resolve: {
         extensions: ['', '.js', '.ts']

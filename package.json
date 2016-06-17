@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Annict API client library",
   "main": "lib/annict.js",
-  "browser": "browser/annict.min.js",
+  "browser": "lib/annict.js",
   "typings": "lib/annict.d.ts",
   "scripts": {
     "test": "npm run test:main && npm run test:browser",
@@ -40,6 +40,7 @@
     "karma-mocha": "^1.0.1",
     "karma-mocha-reporter": "^2.0.4",
     "karma-phantomjs-launcher": "^1.0.0",
+    "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
     "phantomjs-prebuilt": "^2.1.7",
     "ts-loader": "^0.8.2",

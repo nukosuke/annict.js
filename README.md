@@ -1,5 +1,6 @@
 [![npm version](https://badge.fury.io/js/annict.svg)](https://badge.fury.io/js/annict)
-[![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=feature%2Ftest)](https://travis-ci.org/nukosuke/annict.js)
+[![Bower version](https://badge.fury.io/bo/annict.svg)](https://badge.fury.io/bo/annict)
+[![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=develop)](https://travis-ci.org/nukosuke/annict.js)
 [![Dependency Status](https://david-dm.org/nukosuke/annict.js.svg)](https://david-dm.org/nukosuke/annict.js)
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
 
@@ -15,7 +16,16 @@
 npm install annict --save
 ```
 
+ブラウザの場合
+```
+bower install annict --save
+```
+
 ## 使い方
+詳しくは[ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)を参照してください。
+
+### Node.js
+
 ```js
 var Annict = require('annict').default;
 
@@ -49,7 +59,22 @@ annict.OAuth.token(
 });
 ```
 
-## LICENSE
+### ブラウザ
+
+```html
+<body>
+    ...
+    <script src='/js/annict.min.js'></script>
+    <script>
+        var annict = new Annict();
+    </script>
+</body>
+```
+
+Node.jsとブラウザで一部使用できるメソッドに差があります。  
+- https://github.com/nukosuke/annict.js/pull/25#issue-160690355
+
+## ライセンス
 Copyright (c) 2016 ぬこすけ  
-Released under the MIT license  
+本ソフトウェアはMITライセンスのもと配布します。  
 http://opensource.org/licenses/mit-license.php
