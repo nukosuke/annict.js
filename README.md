@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/annict.svg)](https://badge.fury.io/js/annict)
+[![Bower version](https://badge.fury.io/bo/annict.svg)](https://badge.fury.io/bo/annict)
 [![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=develop)](https://travis-ci.org/nukosuke/annict.js)
 [![Dependency Status](https://david-dm.org/nukosuke/annict.js.svg)](https://david-dm.org/nukosuke/annict.js)
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
