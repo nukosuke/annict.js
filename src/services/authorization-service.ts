@@ -42,7 +42,7 @@ export class AuthorizationService {
             );
         }
         else {
-            throw Error('Not Implemented');
+            throw Error('Not Implemented on Node.js');
         }
     }
 
@@ -52,10 +52,15 @@ export class AuthorizationService {
       grant_type    : string,
       redirect_uri  : string,
       code          : string ): Promise<AccessToken> {
-        return this.client.post('https://api.annict.com/oauth/token', {
-          client_id, client_secret, grant_type, redirect_uri, code
-        })
-        .then(response => response.json());
+        if(BROWSER) {
+            throw new Error('Not Implemented on Browser');
+        }
+        else {
+            return this.client.post('https://api.annict.com/oauth/token', {
+                client_id, client_secret, grant_type, redirect_uri, code
+            })
+            .then(response => response.json());
+        }
     }
 
     info(): Promise<AccessTokenInfo> {
