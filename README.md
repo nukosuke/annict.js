@@ -38,14 +38,14 @@ annict.OAuth.token(
   REDIRECT_URI,
   CODE
 )
+.then(response => response.json())
 .then(token => {
 
   annict.client.setHeader('Authorization', `Bearer ${token.access_token}`);
 
   annict.Work.get({ filter_title: 'shirobako' })
-  .then(res => {
-    console.log(res.works);
-  });
+  .then(response => response.json())
+  .then(works    => console.log(works));
 
   annict.Me.Record.create({
     episode_id: 5013,
@@ -54,7 +54,8 @@ annict.OAuth.token(
     share_twitter: 'true',
     share_facebook: 'false'
   })
-  .then(res => console.log);
+  .then(response => response.json())
+  .then(record   => console.log(record));
 
 });
 ```
