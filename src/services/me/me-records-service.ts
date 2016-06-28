@@ -13,8 +13,8 @@ export interface MeRecordCreateRequestQuery {
 }
 
 export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery
-export type MeRecordCreateResponse     = Record
-export type MeRecordUpdateResponse     = Record
+export type MeRecordCreateResponse     = IResponse
+export type MeRecordUpdateResponse     = IResponse
 export type MeRecordDeleteResponse     = IResponse
 
 export class MeRecordsService {
@@ -22,13 +22,11 @@ export class MeRecordsService {
     }
 
     create( query: MeRecordCreateRequestQuery ): Promise<MeRecordCreateResponse> {
-        return this.client.post('https://api.annict.com/v1/me/records', query)
-        .then(response => response.json());
+        return this.client.post('https://api.annict.com/v1/me/records', query);
     }
 
     update( id: RecordId, query: MeRecordUpdateRequestQuery ): Promise<MeRecordUpdateResponse> {
-        return this.client.patch(`https://api.annict.com/v1/me/records/${id}`, query)
-        .then(response => response.json());
+        return this.client.patch(`https://api.annict.com/v1/me/records/${id}`, query);
     }
 
     delete( id: RecordId ): Promise<MeRecordDeleteResponse> {

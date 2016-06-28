@@ -47,8 +47,7 @@ export class RecordsService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query?: RecordsGetRequestQuery): Promise<RecordsGetResponse> {
-        return this.client.get('https://api.annict.com/v1/records', query)
-        .then(response => response.json());
+    get(query?: RecordsGetRequestQuery): Promise<IResponse> {
+        return this.client.get('https://api.annict.com/v1/records', query);
     }
 }
