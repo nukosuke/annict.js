@@ -44,8 +44,7 @@ export class WorksService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query?: WorksGetRequestQuery): Promise<WorksGetResponse> {
-        return this.client.get('https://api.annict.com/v1/works', query)
-        .then(response => response.json());
+    get(query?: WorksGetRequestQuery): Promise<IResponse> {
+        return this.client.get('https://api.annict.com/v1/works', query);
     }
 }

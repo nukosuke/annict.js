@@ -51,26 +51,23 @@ export class AuthorizationService {
       client_secret : string,
       grant_type    : string,
       redirect_uri  : string,
-      code          : string ): Promise<AccessToken> {
+      code          : string ): Promise<IResponse> {
         if(BROWSER) {
             throw new Error('Not Implemented on Browser');
         }
         else {
             return this.client.post('https://api.annict.com/oauth/token', {
                 client_id, client_secret, grant_type, redirect_uri, code
-            })
-            .then(response => response.json());
+            });
         }
     }
 
-    info(): Promise<AccessTokenInfo> {
-        return this.client.get('https://api.annict.com/oauth/token/info')
-        .then(response => response.json());
+    info(): Promise<IResponse> {
+        return this.client.get('https://api.annict.com/oauth/token/info');
     }
 
-    revoke(token: AccessToken): Promise<{}> {
-        return this.client.post('https://api.annict.com/oauth/revoke', { token: token.access_token })
-        .then(response => response.json());
+    revoke(token: AccessToken): Promise<IResponse> {
+        return this.client.post('https://api.annict.com/oauth/revoke', { token: token.access_token });
     }
 
 }
