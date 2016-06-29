@@ -22,4 +22,13 @@ describe('me records service', () => {
         done();
     });
 
+    it('convert share_twitter, share_facebook from String to Boolean', done => {
+        const query = Record.normalizeQuery({
+          share_twitter  : true,
+          share_facebook : false,
+        });
+        expect(query.share_twitter).to.be.a('string').and.equal('true');
+        expect(query.share_facebook).to.be.a('string').and.equal('false');
+        done();
+    });
 });
