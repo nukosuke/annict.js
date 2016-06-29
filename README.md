@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=develop)](https://travis-ci.org/nukosuke/annict.js)
 [![Dependency Status](https://david-dm.org/nukosuke/annict.js.svg)](https://david-dm.org/nukosuke/annict.js)
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
+[![Stories in Ready](https://badge.waffle.io/nukosuke/annict.js.svg?label=ready&title=Ready)](http://waffle.io/nukosuke/annict.js)
 
 # annict.js
 アニメ視聴記録サービス[Annict](https://annict.com/)のAPIクライアントライブラリです。
