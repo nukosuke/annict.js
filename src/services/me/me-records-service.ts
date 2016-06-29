@@ -13,8 +13,8 @@ export interface MeRecordCreateRequestQuery {
 }
 
 export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery
-export type MeRecordCreateResponse     = Record
-export type MeRecordUpdateResponse     = Record
+export type MeRecordCreateResponse     = IResponse
+export type MeRecordUpdateResponse     = IResponse
 export type MeRecordDeleteResponse     = IResponse
 
 export class MeRecordsService {
