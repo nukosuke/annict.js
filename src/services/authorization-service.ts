@@ -37,7 +37,7 @@ export class AuthorizationService {
                     client_id,
                     response_type,
                     redirect_uri,
-                    scope: scope.join(' ')
+                    scope: scope.join(' '),
                 })
             );
         }
@@ -57,7 +57,7 @@ export class AuthorizationService {
         }
         else {
             return this.client.post('https://api.annict.com/oauth/token', {
-                client_id, client_secret, grant_type, redirect_uri, code
+                client_id, client_secret, grant_type, redirect_uri, code,
             });
         }
     }
