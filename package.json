@@ -7,12 +7,13 @@
   "typings": "lib/annict.d.ts",
   "scripts": {
     "test": "npm run test:main && npm run test:browser",
-    "test:main": "./node_modules/.bin/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
-    "test:browser": "./node_modules/.bin/karma start",
+    "test:main": "$(npm bin)/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
+    "test:browser": "$(npm bin)/karma start",
     "build": "npm run build:main && npm run build:browser",
-    "build:main": "./node_modules/.bin/tsc -p tsconfig.json",
-    "build:tsd": "./node_modules/.bin/tsc -p tsconfig.json -d",
-    "build:browser": "./node_modules/.bin/webpack -p",
+    "build:main": "$(npm bin)/tsc -p tsconfig.json",
+    "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
+    "build:browser": "$(npm bin)/webpack -p",
+    "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -47,6 +48,7 @@
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "ts-loader": "^0.8.2",
+    "tslint": "^3.12.1",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
     "webpack": "^1.13.1"
