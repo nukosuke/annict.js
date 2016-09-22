@@ -1,12 +1,20 @@
 language: node_js
 node_js:
-    - "6"
-    - "5"
-    - "4"
+- '6'
+- '5'
+- '4'
 before_install:
-    - npm install typings
-    - ./node_modules/.bin/typings install
+- npm install typings
+- ./node_modules/.bin/typings install
 before_script:
-    - npm run lint
+- npm run lint
 notifications:
-    email: false
+  email: false
+deploy:
+  provider: npm
+  email: 39.nuko@gmail.com
+  api_key:
+    secure: h6CcumkoarYko90d3XQvMF3VaIHQQCqXL1x3KzCHkGyshVvktGL7T16YajSI9anzR+ylGz7fp61md12FMJI7no0FuTe0wOFyqFDY6pdwNsjq5wDUXq5mgtm325y3giYakEdtGKU2LNTXNmZimuFnwYH+Krj4CpOjHIWjcBrfgCu0/hfCvIthW71a5HP7l2GKhV6EM4Ki+qO/7NnxW3xugNqdDQMr80VWK6336tG91YqsqMQQb4gho9x9ZGQmeE8UnS5DzE8m/ZbX+05SnqKkJ6wyAFp8y7ZcKDPq1Uf2CcwhnCVpm6chhCqrPL/wrL1GTGUyAs3AujCRx8z2HXUDMjN1HAOl0lvFd5kD5dv4bq5ZYTtqjd2df8NI9RCgmNR9FJ4CTANm1I98t+d+k5Ykl2Nndh3vRHqXIR8TjEYTXoIXCQ0VxlsCgBmHs5BK1Sl5fO7G3fL2Pu0RUMxpWv7DqAKa5UFVUs8ka9D3LxrYeSenmP3EJXtv+YNrw4y0YGyFETm2LWArW6VYfV8f3Tsg2LCEM2caYTEbnr2GcW62Xz6PXmuAdGSI3j3430e8nM57yCVbXi4IL7xUuR5XEf0OZEfxpqwCcgJpqJtR3wtT9DzVdnBvBEwoJ7yTNhhYsaslBqMo4PnUlZxuAgsVltCK/b/XMJXHIXkdrP5Ta3ciuTw=
+  on:
+    tags: true
+    repo: nukosuke/annict.js
