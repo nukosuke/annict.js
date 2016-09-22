@@ -10,7 +10,7 @@ describe('authorization service', () => {
         done();
     });
 
-    it('support authorize', done => {
+    it('support authorize method', done => {
         window.location.assign = sinon.spy();
         OAuth.authorize();
 
