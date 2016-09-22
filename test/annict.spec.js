@@ -6,6 +6,11 @@ describe('Annict class', () => {
 
     const annict = new Annict();
 
+    it('client works on Node environment', done => {
+        expect(typeof BROWSER).to.eql('undefined');
+        done();
+    });
+
     it('has correct members', done => {
         expect(annict).to.have.all.keys(
             'client',

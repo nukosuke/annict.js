@@ -30,7 +30,7 @@ export class AuthorizationService {
       response_type : string   = 'code',
       redirect_uri  : string   = 'urn:ietf:wg:oauth:2.0:oob',
       scope         : string[] = ['read'] ) {
-        if(BROWSER) {
+        if(typeof BROWSER !== 'undefined') {
             window.location.assign(
                 'https://api.annict.com/oauth/authorize?'
                 + qs.stringify({
@@ -52,7 +52,7 @@ export class AuthorizationService {
       grant_type    : string,
       redirect_uri  : string,
       code          : string ): Promise<IResponse> {
-        if(BROWSER) {
+        if(typeof BROWSER !== 'undefined') {
             throw new Error('Not Implemented on Browser');
         }
         else {
