@@ -5,6 +5,11 @@ describe('authorization service', () => {
     const annict = new Annict();
     const OAuth  = annict.OAuth;
 
+    it('token method throw error', done => {
+        expect(OAuth.token).to.throw(Error);
+        done();
+    });
+
     it('support authorize', done => {
         window.location.assign = sinon.spy();
         OAuth.authorize();
