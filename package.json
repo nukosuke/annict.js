@@ -1,61 +1,61 @@
 {
   "name": "annict",
-  "version": "0.0.4",
   "description": "Annict API client library",
-  "main": "lib/annict.js",
+  "version": "0.0.4",
+  "author": "nukosuke",
   "browser": "lib/annict.js",
-  "typings": "lib/annict.d.ts",
-  "scripts": {
-    "test": "npm run test:main && npm run test:browser",
-    "test:main": "$(npm bin)/mocha './test/**/*.spec.js' -r ./test/globals --recursive",
-    "test:browser": "$(npm bin)/karma start",
-    "build": "npm run build:main && npm run build:browser",
-    "build:main": "$(npm bin)/tsc -p tsconfig.json",
-    "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
-    "build:browser": "$(npm bin)/webpack -p",
-    "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
-    "prepublish": "npm run build"
+  "bugs": {
+    "url": "https://github.com/nukosuke/annict.js/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/nukosuke/annict.js.git"
+  "dependencies": {
+    "es6-promise": "^3.3.1",
+    "isomorphic-fetch": "^2.2.1",
+    "qs": "^6.2.1"
   },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "chai": "^3.5.0",
+    "karma": "^1.3.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sinon-chai": "^1.2.0",
+    "karma-webpack": "^1.8.0",
+    "mocha": "^3.0.2",
+    "phantomjs-prebuilt": "^2.1.12",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "ts-loader": "^0.8.2",
+    "tslint": "^3.12.1",
+    "typescript": "^2.0.3",
+    "typings": "^1.3.3",
+    "webpack": "^1.13.2"
+  },
+  "homepage": "https://github.com/nukosuke/annict.js#readme",
   "keywords": [
     "anime",
     "api",
     "library",
     "service"
   ],
-  "author": "nukosuke",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nukosuke/annict.js/issues"
+  "main": "lib/annict.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nukosuke/annict.js.git"
   },
-  "homepage": "https://github.com/nukosuke/annict.js#readme",
-  "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "chai": "^3.5.0",
-    "karma": "^1.0.0",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-chai": "^0.1.0",
-    "karma-mocha": "^1.0.1",
-    "karma-mocha-reporter": "^2.0.4",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "karma-sinon-chai": "^1.2.0",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^3.0.2",
-    "phantomjs-prebuilt": "^2.1.7",
-    "sinon": "^1.17.4",
-    "sinon-chai": "^2.8.0",
-    "ts-loader": "^0.8.2",
-    "tslint": "^3.12.1",
-    "typescript": "^1.8.10",
-    "typings": "^1.0.4",
-    "webpack": "^1.13.1"
+  "scripts": {
+    "build": "npm run build:main && npm run build:browser",
+    "build:browser": "$(npm bin)/webpack -p",
+    "build:main": "$(npm bin)/tsc -p tsconfig.json",
+    "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
+    "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
+    "prepublish": "npm run build",
+    "test": "npm run test:main && npm run test:browser",
+    "test:browser": "$(npm bin)/karma start",
+    "test:main": "$(npm bin)/mocha './test/**/*.spec.js' -r ./test/globals --recursive"
   },
-  "dependencies": {
-    "es6-promise": "^3.2.1",
-    "isomorphic-fetch": "^2.2.1",
-    "qs": "^6.2.0"
-  }
+  "typings": "lib/annict.d.ts"
 }
