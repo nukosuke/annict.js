@@ -35,8 +35,7 @@ export class EpisodesService {
     constructor( private client: HttpClient ) {
     }
 
-    get(query: EpisodesGetRequestQuery): Promise<EpisodesGetResponse> {
-        return this.client.get('https://api.annict.com/v1/episodes', query)
-        .then(response => response.json());
+    get(query: EpisodesGetRequestQuery): Promise<IResponse> {
+        return this.client.get('https://api.annict.com/v1/episodes', query);
     }
 }

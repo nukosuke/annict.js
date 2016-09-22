@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=develop)](https://travis-ci.org/nukosuke/annict.js)
 [![Dependency Status](https://david-dm.org/nukosuke/annict.js.svg)](https://david-dm.org/nukosuke/annict.js)
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
+[![Stories in Ready](https://badge.waffle.io/nukosuke/annict.js.svg?label=ready&title=Ready)](http://waffle.io/nukosuke/annict.js)
 
 # annict.js
 アニメ視聴記録サービス[Annict](https://annict.com/)のAPIクライアントライブラリです。
@@ -38,14 +39,14 @@ annict.OAuth.token(
   REDIRECT_URI,
   CODE
 )
+.then(response => response.json())
 .then(token => {
 
   annict.client.setHeader('Authorization', `Bearer ${token.access_token}`);
 
   annict.Work.get({ filter_title: 'shirobako' })
-  .then(res => {
-    console.log(res.works);
-  });
+  .then(response => response.json())
+  .then(works    => console.log(works));
 
   annict.Me.Record.create({
     episode_id: 5013,
@@ -54,7 +55,8 @@ annict.OAuth.token(
     share_twitter: 'true',
     share_facebook: 'false'
   })
-  .then(res => console.log);
+  .then(response => response.json())
+  .then(record   => console.log(record));
 
 });
 ```

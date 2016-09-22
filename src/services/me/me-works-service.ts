@@ -15,14 +15,13 @@ export interface MeWorksGetRequestQuery {
     sort_watchers_count : Order
 }
 
-export type MeWorksGetResponse = WorksGetResponse
+export type MeWorksGetResponse = IResponse
 
 export class MeWorksService {
     constructor( private client: HttpClient ) {
     }
 
     get( query: MeWorksGetRequestQuery ): Promise<MeWorksGetResponse> {
-        return this.client.get('https://api.annict.com/v1/me/works', query)
-        .then(response => response.json());
+        return this.client.get('https://api.annict.com/v1/me/works', query);
     }
 }

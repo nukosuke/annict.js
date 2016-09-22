@@ -10,7 +10,7 @@ export class HttpClient {
         'Accept'       : 'application/json',
         'Content-Type' : 'application/json',
         'User-Agent'   : 'annict.js',
-    }
+    };
 
     getHeader( key: string ): string {
         return this.headers[key];
@@ -26,7 +26,7 @@ export class HttpClient {
         }
         return fetch(url, {
             method : 'GET',
-            headers: this.headers
+            headers: this.headers,
         });
     }
 
@@ -34,7 +34,7 @@ export class HttpClient {
         return fetch(url, {
             method : 'POST',
             headers: this.headers,
-            body   : JSON.stringify( body )
+            body   : JSON.stringify( body ),
         });
     }
 
@@ -42,14 +42,14 @@ export class HttpClient {
         return fetch(url, {
             method : 'PATCH',
             headers: this.headers,
-            body   : JSON.stringify( body )
+            body   : JSON.stringify( body ),
         });
     }
 
     delete( url: string ): Promise<IResponse> {
         return fetch(url, {
             method: 'DELETE',
-            headers: this.headers
+            headers: this.headers,
         });
     }
 }

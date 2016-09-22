@@ -4,16 +4,16 @@ import {
   WorksService,
   EpisodesService,
   RecordsService,
-  MeService
+  MeService,
 } from './services';
 
 export default class Annict {
-  public client  : HttpClient
-  public OAuth   : AuthorizationService
-  public Work    : WorksService
-  public Episode : EpisodesService
-  public Record  : RecordsService
-  public Me      : MeService
+  public client  : HttpClient;
+  public OAuth   : AuthorizationService;
+  public Work    : WorksService;
+  public Episode : EpisodesService;
+  public Record  : RecordsService;
+  public Me      : MeService;
 
   constructor() {
       this.client  = new HttpClient();
