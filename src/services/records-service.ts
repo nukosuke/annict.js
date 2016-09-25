@@ -3,6 +3,9 @@ import { Order }      from '../string-literal';
 import { Work }       from './works-service';
 import { Episode }    from './episodes-service';
 
+/**
+ * レスポンスのユーザフィールド
+ */
 export interface User {
     id            : number
     username      : string
@@ -13,6 +16,9 @@ export interface User {
     created_at    : Date
 }
 
+/**
+ * レスポンスの視聴記録フィールド
+ */
 export interface Record {
     id             : number
     comment        : string
@@ -26,6 +32,9 @@ export interface Record {
     episode        : Episode
 }
 
+/**
+ * 視聴記録取得リクエストのクエリパラメータ
+ */
 export interface RecordsGetRequestQuery {
     fields            : string[]
     filter_ids        : number[]
@@ -36,6 +45,9 @@ export interface RecordsGetRequestQuery {
     sort_likes_count  : Order
 }
 
+/**
+ * 視聴記録取得リクエストのレスポンス
+ */
 export interface RecordsGetResponse {
     records     : Record[]
     total_count : number
@@ -43,10 +55,21 @@ export interface RecordsGetResponse {
     prev_page   : number
 }
 
+/**
+ * 視聴記録に関するサービス
+ */
 export class RecordsService {
+
+    /**
+     * @param client  HTTPクライアント
+     */
     constructor( private client: HttpClient ) {
     }
 
+    /**
+     * 視聴記録を取得する
+     * @param query クエリパラメータ
+     */
     get(query?: RecordsGetRequestQuery): Promise<IResponse> {
         return this.client.get('https://api.annict.com/v1/records', query);
     }
