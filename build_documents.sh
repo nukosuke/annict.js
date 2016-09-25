@@ -1,6 +1,6 @@
 #!/bin/sh
 
-npm run docs && \
+npm install && npm run docs && \
 git checkout --orphan gh-pages
 ls | grep -v '^docs$' | xargs rm -rf
 mv ./docs/* . && rmdir docs
