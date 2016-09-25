@@ -54,7 +54,7 @@
     "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
     "docs": "$(npm bin)/typedoc --mode file --readme none --name 'annict.js リファレンス' --target ES5 --out ./docs",
     "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
-    "prepublish": "npm run build",
+    "prepublish": "$(npm bin)/typings install && npm run build",
     "test": "npm run test:main && npm run test:browser",
     "test:browser": "$(npm bin)/karma start",
     "test:main": "$(npm bin)/mocha './test/**/*.spec.js' -r ./test/globals --recursive"
