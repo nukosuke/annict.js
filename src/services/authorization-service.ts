@@ -45,7 +45,7 @@ export class AuthorizationService {
      * ユーザのアクセス承認プロセスを行う (Node非サポート)
      * @param client_id     アプリケーション作成時に発行された`アプリケーションID`
      * @param response_type `code`を指定
-     * @redirect_uri        アプリケーション作成時に指定した`コールバックURL`
+     * @param redirect_uri  アプリケーション作成時に指定した`コールバックURL`
      * @param scope         アプリケーションのアクセス可能範囲 (`read`と`write`が指定可能)
      */
     authorize(
