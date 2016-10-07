@@ -1,0 +1,4 @@
+linter:
+  tslint:
+    options:
+      config: 'tslint.json'
