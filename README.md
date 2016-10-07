@@ -8,9 +8,9 @@
 # annict.js
 アニメ視聴記録サービス[Annict](https://annict.com/)のAPIクライアントライブラリです。
 
+- [annict.js使い方ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
+- [annict.jsリファレンス](https://nukosuke.github.io/annict.js/)
 - [Annict APIドキュメント](https://annict.wikihub.io/)
-- [annict.jsドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
-
 
 ## インストール
 ```

@@ -3,8 +3,14 @@ import { HttpClient } from '../http-client';
 import { Scope }      from '../string-literal';
 import * as qs        from 'qs';
 
+/**
+ * ブラウザ環境の時のみwebpackで定義する定数
+ */
 declare const BROWSER : string;
 
+/**
+ * レスポンスのアクセストークンフィールド
+ */
 export interface AccessToken {
     access_token : string
     token_type   : string
@@ -13,6 +19,9 @@ export interface AccessToken {
     created_at   : number
 }
 
+/**
+ * レスポンスのアクセストークン情報フィールド
+ */
 export interface AccessTokenInfo {
     resource_owner_id  : number
     scopes             : Scope[]
@@ -21,10 +30,24 @@ export interface AccessTokenInfo {
     created_at         : number
 }
 
+/**
+ * 認証に関するサービス
+ */
 export class AuthorizationService {
+
+    /**
+     * @param client  HTTPクライアント
+     */
     constructor( private client: HttpClient ) {
     }
 
+    /**
+     * ユーザのアクセス承認プロセスを行う (Node非サポート)
+     * @param client_id     アプリケーション作成時に発行された`アプリケーションID`
+     * @param response_type `code`を指定
+     * @redirect_uri        アプリケーション作成時に指定した`コールバックURL`
+     * @param scope         アプリケーションのアクセス可能範囲 (`read`と`write`が指定可能)
+     */
     authorize(
       client_id     : string,
       response_type : string   = 'code',
@@ -46,6 +69,14 @@ export class AuthorizationService {
         }
     }
 
+    /**
+     * アクセストークンを取得する (ブラウザ非サポート)
+     * @param client_id     アプリケーション作成時に発行された`アプリケーションID`
+     * @param client_secret アプリケーション作成時に発行された`シークレットキー`
+     * @param grant_type    `authorization_code`を指定
+     * @param redirect_uri  アプリケーション作成時に指定した`コールバックURL`
+     * @param code          ユーザのアクセス承認後に取得した`code`
+     */
     token(
       client_id     : string,
       client_secret : string,
@@ -62,10 +93,17 @@ export class AuthorizationService {
         }
     }
 
+    /**
+     * 認証ユーザの情報を取得する
+     */
     info(): Promise<IResponse> {
         return this.client.get('https://api.annict.com/oauth/token/info');
     }
 
+    /**
+     * アクセストークンを失効させる
+     * @param token アクセストークン
+     */
     revoke(token: AccessToken): Promise<IResponse> {
         return this.client.post('https://api.annict.com/oauth/revoke', { token: token.access_token });
     }

@@ -3,6 +3,9 @@ import { Order }      from '../string-literal';
 
 export type WorkId = number
 
+/**
+ * レスポンスの作品フィールド
+ */
 export interface Work {
     id                : WorkId
     title             : string
@@ -21,6 +24,9 @@ export interface Work {
     watchers_count    : number
 }
 
+/**
+ * 作品取得リクエストのクエリパラメータ
+ */
 export interface WorksGetRequestQuery {
     fields              : string[]
     filter_ids          : number[]
@@ -33,6 +39,9 @@ export interface WorksGetRequestQuery {
     sort_watchers_count : Order
 }
 
+/**
+ * 作品取得リクエストのレスポンス
+ */
 export interface WorksGetResponse {
     works       : Work[]
     total_count : number
@@ -40,10 +49,21 @@ export interface WorksGetResponse {
     prev_page   : number
 }
 
+/**
+ * 作品に関するサービス
+ */
 export class WorksService {
+
+    /**
+     * @param client  HTTPクライアント
+     */
     constructor( private client: HttpClient ) {
     }
 
+    /**
+     * 作品を取得する
+     * @param query クエリパラメータ
+     */
     get(query?: WorksGetRequestQuery): Promise<IResponse> {
         return this.client.get('https://api.annict.com/v1/works', query);
     }
