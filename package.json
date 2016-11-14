@@ -1,7 +1,7 @@
 {
   "name": "annict",
   "description": "Annict API client library",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "nukosuke",
   "browser": "lib/annict.js",
   "bugs": {
