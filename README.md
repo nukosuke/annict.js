@@ -76,6 +76,6 @@ Node.jsとブラウザで一部使用できるメソッドに差があります�
 - https://github.com/nukosuke/annict.js/pull/25#issue-160690355
 
 ## ライセンス
-Copyright (c) 2016 ぬこすけ  
+Copyright (c) 2017 ぬこすけ  
 本ソフトウェアはMITライセンスのもと配布します。  
 http://opensource.org/licenses/mit-license.php
