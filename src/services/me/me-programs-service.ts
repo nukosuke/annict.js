@@ -3,8 +3,8 @@ import { Order, BooleanString } from '../../string-literal';
 import { Work, WorkId }          from '../works-service';
 import { Episode }       from '../episodes-service';
 
-export type ChannelId = number
-export type ProgramId = number
+export type ChannelId = number;
+export type ProgramId = number;
 
 export interface Channel {
     id   : ChannelId

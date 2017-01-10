@@ -1,14 +1,14 @@
 export type Scope =
-  'read' | 'write'
+  'read' | 'write';
 
 export type Order =
-  'asc' | 'desc'
+  'asc' | 'desc';
 
 export type BooleanString =
-  'true' | 'false'
+  'true' | 'false';
 
 export type Media =
-  'tv' | 'ova' | 'movie' | 'web' | 'other'
+  'tv' | 'ova' | 'movie' | 'web' | 'other';
 
 export type Status =
-  'wanna_watch' | 'watching' | 'watched' | 'on_hold' | 'stop_watching' | 'no_select'
+  'wanna_watch' | 'watching' | 'watched' | 'on_hold' | 'stop_watching' | 'no_select';

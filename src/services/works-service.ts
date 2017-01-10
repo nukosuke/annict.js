@@ -1,7 +1,7 @@
 import { HttpClient } from '../http-client';
 import { Order }      from '../string-literal';
 
-export type WorkId = number
+export type WorkId = number;
 
 /**
  * レスポンスの作品フィールド

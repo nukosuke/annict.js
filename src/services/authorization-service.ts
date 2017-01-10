@@ -54,15 +54,8 @@ export class AuthorizationService {
       redirect_uri  : string   = 'urn:ietf:wg:oauth:2.0:oob',
       scope         : string[] = ['read'] ) {
         if(typeof BROWSER !== 'undefined') {
-            window.location.assign(
-                'https://api.annict.com/oauth/authorize?'
-                + qs.stringify({
-                    client_id,
-                    response_type,
-                    redirect_uri,
-                    scope: scope.join(' '),
-                })
-            );
+            window.location.assign('https://api.annict.com/oauth/authorize?'
+              + qs.stringify({ client_id, response_type, redirect_uri, scope: scope.join(' ') }));
         }
         else {
             throw Error('Not Implemented on Node.js');

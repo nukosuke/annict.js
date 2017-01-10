@@ -2,7 +2,7 @@ import { HttpClient }    from '../../http-client';
 import { Record }        from '../records-service';
 import { BooleanString } from '../../string-literal';
 
-export type RecordId = number
+export type RecordId = number;
 
 export interface MeRecordCreateRequestQuery {
     episode_id     : number
@@ -12,10 +12,10 @@ export interface MeRecordCreateRequestQuery {
     share_facebook : string | boolean
 }
 
-export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery
-export type MeRecordCreateResponse     = IResponse
-export type MeRecordUpdateResponse     = IResponse
-export type MeRecordDeleteResponse     = IResponse
+export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery;
+export type MeRecordCreateResponse     = IResponse;
+export type MeRecordUpdateResponse     = IResponse;
+export type MeRecordDeleteResponse     = IResponse;
 
 export class MeRecordsService {
     constructor( private client: HttpClient ) {
