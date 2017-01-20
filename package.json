@@ -52,7 +52,7 @@
     "build:browser": "$(npm bin)/webpack -p",
     "build:main": "$(npm bin)/tsc -p tsconfig.json",
     "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
-    "docs": "$(npm bin)/typedoc --mode file --readme none --name 'annict.js リファレンス' --target ES5 --out ./docs",
+    "docs": "$(npm bin)/typedoc --mode file --readme none --target ES5 --out ./docs",
     "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
     "prepublish": "$(npm bin)/typings install && npm run build",
     "test": "npm run test:main && npm run test:browser",
