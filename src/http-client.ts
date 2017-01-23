@@ -3,12 +3,12 @@ import { Promise } from 'es6-promise';
 import * as qs     from 'qs';
 
 /**
- * fetch APIのラッパークラス
+ * wrapper class of fetch API
  */
 export class HttpClient {
 
     /**
-     * HTTPヘッダのハッシュ
+     * HTTP header hash
      */
     private headers: {[index:string]: string} = {
         'Accept'       : 'application/json',
@@ -17,26 +17,26 @@ export class HttpClient {
     };
 
     /**
-     * ヘッダの値を取得する
-     * @param key ヘッダのフィールド名
+     * get value in HTTP header by key
+     * @param key field name
      */
     getHeader( key: string ): string {
         return this.headers[key];
     }
 
     /**
-     * ヘッダの値を設定する
-     * @param key   ヘッダのフィールド名
-     * @param value ヘッダの値
+     * set value in HTTP header by key
+     * @param key   field name
+     * @param value value of field
      */
     setHeader( key: string, value: string ): void {
         this.headers[key] = value;
     }
 
     /**
-     * URLに対してGETリクエストを行う
-     * @param url   リクエスト先のURL
-     * @param query クエリのハッシュ
+     * execute GET method for URL
+     * @param url   request URL
+     * @param query query object in form of key-value
      */
     get( url: string, query?: {[key:string]: any} ): Promise<IResponse> {
         if (query) {
@@ -49,9 +49,9 @@ export class HttpClient {
     }
 
     /**
-     * URLに対してPOSTリクエストを行う
-     * @param url   リクエスト先のURL
-     * @param body  リクエストbody
+     * execute POST method for URL
+     * @param url   request URL
+     * @param body  request body object
      */
     post( url: string, body: any ): Promise<IResponse> {
         return fetch(url, {
@@ -62,9 +62,9 @@ export class HttpClient {
     }
 
     /**
-     * URLに対してPATCHリクエストを行う
-     * @param url   リクエスト先のURL
-     * @param body  リクエストbody
+     * execute PATCH method for URL
+     * @param url   request URL
+     * @param body  request body object
      */
     patch( url: string, body: any ): Promise<IResponse> {
         return fetch(url, {
@@ -75,8 +75,8 @@ export class HttpClient {
     }
 
     /**
-     * URLに対してDELETEリクエストを行う
-     * @param url リクエスト先のURL
+     * execute DELETE method for URL
+     * @param url request URL
      */
     delete( url: string ): Promise<IResponse> {
         return fetch(url, {
