@@ -9,7 +9,7 @@ annict.js is client library for anime tracking service, [Annict](https://annict.
 
 - [annict.js Tutorial (Japanese Only)](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
 - [annict.js Reference](https://nukosuke.github.io/annict.js/)
-- [Annict API Official Document (Japanese Only)](https://annict.wikihub.io/)
+- [Annict API Official Document](https://docs.annict.com/)
 
 ## Install
 
