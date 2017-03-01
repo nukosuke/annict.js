@@ -7,6 +7,9 @@ import {
   MeService,
 } from './services';
 
+/**
+ * Annict API class
+ */
 export default class Annict {
   public client  : HttpClient;
   public OAuth   : AuthorizationService;

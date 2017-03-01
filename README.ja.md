@@ -5,28 +5,24 @@
 [![devDependency Status](https://david-dm.org/nukosuke/annict.js/dev-status.svg)](https://david-dm.org/nukosuke/annict.js#info=devDependencies)
 
 # annict.js
-annict.js is client library for anime tracking service, [Annict](https://annict.com/). This library supports Node.js and browser.
+アニメ視聴記録サービス[Annict](https://annict.com/)のAPIクライアントライブラリです。
 
-- [annict.js Tutorial (Japanese Only)](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
-- [annict.js Reference](https://nukosuke.github.io/annict.js/)
-- [Annict API Official Document (Japanese Only)](https://annict.wikihub.io/)
+- [annict.js使い方ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)
+- [annict.jsリファレンス](https://nukosuke.github.io/annict.js/)
+- [Annict APIドキュメント](https://annict.wikihub.io/)
 
-## Install
-
-NPM
+## インストール
 ```
 npm install annict --save
-# or if you use Yarn for package managing
-yarn add annict
 ```
 
-Bower
+ブラウザの場合
 ```
 bower install annict --save
 ```
 
-## Usage
-See also [Document](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2) for more details.
+## 使い方
+詳しくは[ドキュメント](http://qiita.com/nukosuke/items/eb4829de5a0497bd43c2)を参照してください。
 
 ### Node.js
 
@@ -64,7 +60,7 @@ annict.OAuth.token(
 });
 ```
 
-### Browser
+### ブラウザ
 
 ```html
 <body>
@@ -76,10 +72,10 @@ annict.OAuth.token(
 </body>
 ```
 
-Available methods are partly differ between Node.js and browser.
+Node.jsとブラウザで一部使用できるメソッドに差があります。  
 - https://github.com/nukosuke/annict.js/pull/25#issue-160690355
 
-## License
-Copyright (c) 2017 nukosuke  
-This software is licensed under MIT license.
+## ライセンス
+Copyright (c) 2017 ぬこすけ  
+本ソフトウェアはMITライセンスのもと配布します。  
 http://opensource.org/licenses/mit-license.php
