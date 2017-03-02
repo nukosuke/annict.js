@@ -3,7 +3,7 @@ import { Order }      from '../string-literal';
 import { Work }       from './works-service';
 
 /**
- * レスポンスのエピソードフィールド
+ * episode fields of API response
  */
 export interface Episode {
     id            : number
@@ -18,7 +18,7 @@ export interface Episode {
 }
 
 /**
- * エピソード取得リクエストのクエリパラメータ
+ * query parameters for request
  */
 export interface EpisodesGetRequestQuery {
     fields           : string[]
@@ -31,7 +31,7 @@ export interface EpisodesGetRequestQuery {
 }
 
 /**
- * エピソード取得リクエストのレスポンス
+ * response of episodes
  */
 export interface EpisodesGetResponse {
     episodes: Episode[]
@@ -41,19 +41,19 @@ export interface EpisodesGetResponse {
 }
 
 /**
- * エピソードに関するサービス
+ * episode service class
  */
 export class EpisodesService {
 
     /**
-     * @param client  HTTPクライアント
+     * @param client  HTTP client
      */
     constructor( private client: HttpClient ) {
     }
 
     /**
-     * エピソードを取得する
-     * @param query クエリパラメータ
+     * fetch items
+     * @param query query parameters
      */
     get(query: EpisodesGetRequestQuery): Promise<IResponse> {
         return this.client.get('https://api.annict.com/v1/episodes', query);

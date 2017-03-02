@@ -4,7 +4,7 @@ import { Work }       from './works-service';
 import { Episode }    from './episodes-service';
 
 /**
- * レスポンスのユーザフィールド
+ * user fields of API response
  */
 export interface User {
     id            : number
@@ -17,7 +17,7 @@ export interface User {
 }
 
 /**
- * レスポンスの視聴記録フィールド
+ * record fields of API response
  */
 export interface Record {
     id             : number
@@ -33,7 +33,7 @@ export interface Record {
 }
 
 /**
- * 視聴記録取得リクエストのクエリパラメータ
+ * query parameters for request
  */
 export interface RecordsGetRequestQuery {
     fields            : string[]
@@ -46,7 +46,7 @@ export interface RecordsGetRequestQuery {
 }
 
 /**
- * 視聴記録取得リクエストのレスポンス
+ * response of records
  */
 export interface RecordsGetResponse {
     records     : Record[]
@@ -56,19 +56,19 @@ export interface RecordsGetResponse {
 }
 
 /**
- * 視聴記録に関するサービス
+ * records service class
  */
 export class RecordsService {
 
     /**
-     * @param client  HTTPクライアント
+     * @param client  HTTP client
      */
     constructor( private client: HttpClient ) {
     }
 
     /**
-     * 視聴記録を取得する
-     * @param query クエリパラメータ
+     * fetch items
+     * @param query query parameters
      */
     get(query?: RecordsGetRequestQuery): Promise<IResponse> {
         return this.client.get('https://api.annict.com/v1/records', query);

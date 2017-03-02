@@ -4,7 +4,7 @@ import { Order }      from '../string-literal';
 export type WorkId = number;
 
 /**
- * レスポンスの作品フィールド
+ * work fields of API response
  */
 export interface Work {
     id                : WorkId
@@ -25,7 +25,7 @@ export interface Work {
 }
 
 /**
- * 作品取得リクエストのクエリパラメータ
+ * query parameters for request
  */
 export interface WorksGetRequestQuery {
     fields              : string[]
@@ -40,7 +40,7 @@ export interface WorksGetRequestQuery {
 }
 
 /**
- * 作品取得リクエストのレスポンス
+ * response of work
  */
 export interface WorksGetResponse {
     works       : Work[]
@@ -50,19 +50,19 @@ export interface WorksGetResponse {
 }
 
 /**
- * 作品に関するサービス
+ * works service class
  */
 export class WorksService {
 
     /**
-     * @param client  HTTPクライアント
+     * @param client  HTTP client
      */
     constructor( private client: HttpClient ) {
     }
 
     /**
-     * 作品を取得する
-     * @param query クエリパラメータ
+     * fetch items
+     * @param query query parameters
      */
     get(query?: WorksGetRequestQuery): Promise<IResponse> {
         return this.client.get('https://api.annict.com/v1/works', query);
