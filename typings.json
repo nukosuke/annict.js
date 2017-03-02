@@ -2,9 +2,5 @@
   "name": "annict",
   "dependencies": {},
   "ambientDependencies": {},
-  "globalDependencies": {
-    "es6-promise": "registry:dt/es6-promise#0.0.0+20160614011821",
-    "isomorphic-fetch": "registry:dt/isomorphic-fetch#0.0.0+20160830175641",
-    "qs": "registry:dt/qs#6.2.0+20160707010053"
-  }
+  "globalDependencies": {}
 }

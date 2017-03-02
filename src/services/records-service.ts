@@ -70,7 +70,7 @@ export class RecordsService {
      * fetch items
      * @param query query parameters
      */
-    get(query?: RecordsGetRequestQuery): Promise<IResponse> {
+    get(query?: RecordsGetRequestQuery): Promise<Response> {
         return this.client.get('https://api.annict.com/v1/records', query);
     }
 }

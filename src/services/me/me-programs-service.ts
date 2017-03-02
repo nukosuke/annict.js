@@ -46,7 +46,7 @@ export class MeProgramsService {
     constructor( private client: HttpClient ) {
     }
 
-    get( query: MeProgramsGetRequestQuery ): Promise<IResponse> {
+    get( query: MeProgramsGetRequestQuery ): Promise<Response> {
         return this.client.get('https://api.annict.com/v1/me/programs', query);
     }
 }

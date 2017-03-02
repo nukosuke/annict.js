@@ -3,11 +3,14 @@
   "description": "Annict API client library",
   "version": "0.0.7",
   "author": "nukosuke",
-  "browser": "lib/annict.js",
+  "browser": "./lib/annict.js",
   "bugs": {
     "url": "https://github.com/nukosuke/annict.js/issues"
   },
   "dependencies": {
+    "@types/es6-promise": "^0.0.32",
+    "@types/isomorphic-fetch": "^0.0.33",
+    "@types/qs": "^6.2.30",
     "es6-promise": "^4.0.5",
     "isomorphic-fetch": "^2.2.1",
     "qs": "^6.2.1"
@@ -22,17 +25,16 @@
     "karma-mocha-reporter": "^2.2.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sinon-chai": "^1.2.4",
-    "karma-webpack": "^1.8.0",
+    "karma-webpack": "^2.0.2",
     "mocha": "^3.1.0",
     "phantomjs-prebuilt": "^2.1.12",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
-    "ts-loader": "^1.0.0",
+    "ts-loader": "^2.0.1",
     "tslint": "^4.3.1",
     "typedoc": "^0.5.3",
     "typescript": "^2.0.3",
-    "typings": "^2.0.0",
-    "webpack": "^1.13.2"
+    "webpack": "^2.2.1"
   },
   "homepage": "https://github.com/nukosuke/annict.js#readme",
   "keywords": [
@@ -42,7 +44,7 @@
     "service"
   ],
   "license": "MIT",
-  "main": "lib/annict.js",
+  "main": "./lib/annict.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/nukosuke/annict.js.git"
@@ -54,10 +56,10 @@
     "build:tsd": "$(npm bin)/tsc -p tsconfig.json -d",
     "docs": "$(npm bin)/typedoc --mode file --readme none --target ES5 --out ./docs",
     "lint": "$(npm bin)/tslint -c tslint.json './src/**/*.ts'",
-    "prepublish": "$(npm bin)/typings install && npm run build",
+    "prepublish": "npm run build",
     "test": "npm run test:main && npm run test:browser",
     "test:browser": "$(npm bin)/karma start",
     "test:main": "$(npm bin)/mocha './test/**/*.spec.js' -r ./test/globals --recursive"
   },
-  "typings": "lib/annict.d.ts"
+  "types": "./lib/annict.d.ts"
 }

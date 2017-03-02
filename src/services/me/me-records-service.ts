@@ -13,9 +13,9 @@ export interface MeRecordCreateRequestQuery {
 }
 
 export type MeRecordUpdateRequestQuery = MeRecordCreateRequestQuery;
-export type MeRecordCreateResponse     = IResponse;
-export type MeRecordUpdateResponse     = IResponse;
-export type MeRecordDeleteResponse     = IResponse;
+export type MeRecordCreateResponse     = Response;
+export type MeRecordUpdateResponse     = Response;
+export type MeRecordDeleteResponse     = Response;
 
 export class MeRecordsService {
     constructor( private client: HttpClient ) {

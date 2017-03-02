@@ -64,7 +64,7 @@ export class WorksService {
      * fetch items
      * @param query query parameters
      */
-    get(query?: WorksGetRequestQuery): Promise<IResponse> {
+    get(query?: WorksGetRequestQuery): Promise<Response> {
         return this.client.get('https://api.annict.com/v1/works', query);
     }
 }

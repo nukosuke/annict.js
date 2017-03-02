@@ -55,7 +55,7 @@ export class EpisodesService {
      * fetch items
      * @param query query parameters
      */
-    get(query: EpisodesGetRequestQuery): Promise<IResponse> {
+    get(query: EpisodesGetRequestQuery): Promise<Response> {
         return this.client.get('https://api.annict.com/v1/episodes', query);
     }
 }

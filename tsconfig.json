@@ -7,31 +7,10 @@
         "rootDir": "src",
         "outDir": "lib"
     },
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./typings/index.d.ts"
+    "include": [
+        "./src/**/*.ts"
     ],
     "exclude": [
         "node_modules"
-    ],
-    "files": [
-        "./src/annict.ts",
-        "./src/http-client.ts",
-        "./src/services/authorization-service.ts",
-        "./src/services/episodes-service.ts",
-        "./src/services/index.ts",
-        "./src/services/me-service.ts",
-        "./src/services/me/index.ts",
-        "./src/services/me/me-programs-service.ts",
-        "./src/services/me/me-records-service.ts",
-        "./src/services/me/me-statuses-service.ts",
-        "./src/services/me/me-works-service.ts",
-        "./src/services/records-service.ts",
-        "./src/services/works-service.ts",
-        "./src/string-literal.ts",
-        "./typings/index.d.ts"
-    ],
-    "atom": {
-        "rewriteTsconfig": true
-    }
+    ]
 }

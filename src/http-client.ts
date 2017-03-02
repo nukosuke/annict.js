@@ -38,7 +38,7 @@ export class HttpClient {
      * @param url   request URL
      * @param query query object in form of key-value
      */
-    get( url: string, query?: {[key:string]: any} ): Promise<IResponse> {
+    get( url: string, query?: {[key:string]: any} ): Promise<Response> {
         if (query) {
             url += '?' + qs.stringify(query, { arrayFormat: 'repeat' });
         }
@@ -53,7 +53,7 @@ export class HttpClient {
      * @param url   request URL
      * @param body  request body object
      */
-    post( url: string, body: any ): Promise<IResponse> {
+    post( url: string, body: any ): Promise<Response> {
         return fetch(url, {
             method : 'POST',
             headers: this.headers,
@@ -66,7 +66,7 @@ export class HttpClient {
      * @param url   request URL
      * @param body  request body object
      */
-    patch( url: string, body: any ): Promise<IResponse> {
+    patch( url: string, body: any ): Promise<Response> {
         return fetch(url, {
             method : 'PATCH',
             headers: this.headers,
@@ -78,7 +78,7 @@ export class HttpClient {
      * execute DELETE method for URL
      * @param url request URL
      */
-    delete( url: string ): Promise<IResponse> {
+    delete( url: string ): Promise<Response> {
         return fetch(url, {
             method: 'DELETE',
             headers: this.headers,

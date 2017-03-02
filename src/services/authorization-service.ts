@@ -4,12 +4,12 @@ import { Scope }      from '../string-literal';
 import * as qs        from 'qs';
 
 /**
- * ブラウザ環境の時のみwebpackで定義する定数
+ * constant defined by webpack only for browser build
  */
 declare const BROWSER : string;
 
 /**
- * レスポンスのアクセストークンフィールド
+ * access token fields of API response
  */
 export interface AccessToken {
     access_token : string
@@ -75,7 +75,7 @@ export class AuthorizationService {
       client_secret : string,
       grant_type    : string,
       redirect_uri  : string,
-      code          : string ): Promise<IResponse> {
+      code          : string ): Promise<Response> {
         if(typeof BROWSER !== 'undefined') {
             throw new Error('Not Implemented on Browser');
         }
@@ -89,7 +89,7 @@ export class AuthorizationService {
     /**
      * 認証ユーザの情報を取得する
      */
-    info(): Promise<IResponse> {
+    info(): Promise<Response> {
         return this.client.get('https://api.annict.com/oauth/token/info');
     }
 
@@ -97,7 +97,7 @@ export class AuthorizationService {
      * アクセストークンを失効させる
      * @param token アクセストークン
      */
-    revoke(token: AccessToken): Promise<IResponse> {
+    revoke(token: AccessToken): Promise<Response> {
         return this.client.post('https://api.annict.com/oauth/revoke', { token: token.access_token });
     }
 

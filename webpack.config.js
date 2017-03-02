@@ -9,11 +9,11 @@ module.exports = {
         library: 'Annict'
     },
     resolve: {
-        extensions: ['', '.js', '.ts']
+        extensions: ['*', '.js', '.ts']
     },
     module: {
         loaders: [
-            { test: /\.ts$/, loader: 'ts' }
+            { test: /\.ts$/, loader: 'ts-loader' }
         ]
     },
     plugins: [
