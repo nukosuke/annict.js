@@ -34,6 +34,15 @@ export class HttpClient {
     }
 
     /**
+     * set access token to header.
+     * This method equivalent to `annict.client.setHeader("Authorization", "Bearer <token>");
+     * @param token access token
+     */
+    setToken( token: string ): void {
+      this.headers['Authorization'] = `Bearer ${token}`;
+    }
+
+    /**
      * execute GET method for URL
      * @param url   request URL
      * @param query query object in form of key-value

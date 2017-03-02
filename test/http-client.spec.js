@@ -12,6 +12,7 @@ describe('http client', () => {
         [
             'getHeader',
             'setHeader',
+            'setToken',
             'post',
             'get',
             'patch',
