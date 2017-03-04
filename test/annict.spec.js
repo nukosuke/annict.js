@@ -18,6 +18,8 @@ describe('Annict class', () => {
             'Work',
             'Episode',
             'Record',
+            'User',
+            'Activity',
             'Me'
         );
         done();
