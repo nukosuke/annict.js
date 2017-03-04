@@ -1,20 +1,8 @@
 import { HttpClient } from '../http-client';
 import { Order }      from '../string-literal';
+import { User }       from './users-service';
 import { Work }       from './works-service';
 import { Episode }    from './episodes-service';
-
-/**
- * user fields of API response
- */
-export interface User {
-    id            : number
-    username      : string
-    name          : string
-    description   : string
-    url           : string
-    records_count : number
-    created_at    : Date
-}
 
 /**
  * record fields of API response
