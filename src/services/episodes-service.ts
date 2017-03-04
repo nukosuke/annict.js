@@ -6,15 +6,16 @@ import { Work }       from './works-service';
  * episode fields of API response
  */
 export interface Episode {
-    id            : number
-    number        : number
-    number_text   : string
-    sort_number   : number
-    title         : string
-    records_count : number
-    work?         : Work
-    prev_episode? : Episode
-    next_episode? : Episode
+    id                    : number
+    number                : number
+    number_text           : string
+    sort_number           : number
+    title                 : string
+    records_count         : number
+    record_comments_count : number
+    work?                 : Work
+    prev_episode?         : Episode
+    next_episode?         : Episode
 }
 
 /**
