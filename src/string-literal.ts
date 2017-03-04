@@ -12,3 +12,6 @@ export type Media =
 
 export type Status =
   'wanna_watch' | 'watching' | 'watched' | 'on_hold' | 'stop_watching' | 'no_select';
+
+export type Action =
+  'create_record' | 'create_multiple_records' | 'create_status';
