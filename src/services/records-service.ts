@@ -1,8 +1,8 @@
-import { HttpClient } from '../http-client';
-import { Order }      from '../string-literal';
-import { User }       from './users-service';
-import { Work }       from './works-service';
-import { Episode }    from './episodes-service';
+import { HttpClient }           from '../http-client';
+import { BooleanString, Order } from '../string-literal';
+import { User }                 from './users-service';
+import { Work }                 from './works-service';
+import { Episode }              from './episodes-service';
 
 /**
  * record fields of API response
@@ -24,13 +24,14 @@ export interface Record {
  * query parameters for request
  */
 export interface RecordsGetRequestQuery {
-    fields            : string[]
-    filter_ids        : number[]
-    filter_episode_id : number
-    page              : number
-    per_page          : number
-    sort_id           : Order
-    sort_likes_count  : Order
+    fields                    : string[]
+    filter_ids                : number[]
+    filter_episode_id         : number
+    filter_has_record_comment : BooleanString
+    page                      : number
+    per_page                  : number
+    sort_id                   : Order
+    sort_likes_count          : Order
 }
 
 /**
