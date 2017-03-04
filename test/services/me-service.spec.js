@@ -14,6 +14,7 @@ describe('me service', () => {
             'Work',
             'Program'
         );
+        expect(me).to.have.property('get');
         done();
     });
 
