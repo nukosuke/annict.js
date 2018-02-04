@@ -41,7 +41,7 @@ annict.OAuth.token(
 .then(response => response.json())
 .then(token => {
 
-  annict.client.setHeader('Authorization', `Bearer ${token.access_token}`);
+  annict.client.setToken(token.access_token);
 
   annict.Work.get({ filter_title: 'shirobako' })
   .then(response => response.json())
@@ -76,6 +76,6 @@ Node.jsとブラウザで一部使用できるメソッドに差があります�
 - https://github.com/nukosuke/annict.js/pull/25#issue-160690355
 
 ## ライセンス
-Copyright (c) 2017 ぬこすけ  
+Copyright (c) 2018 ぬこすけ  
 本ソフトウェアはMITライセンスのもと配布します。  
 http://opensource.org/licenses/mit-license.php
