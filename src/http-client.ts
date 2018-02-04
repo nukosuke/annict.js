@@ -1,6 +1,5 @@
 import 'isomorphic-fetch';
-import { Promise } from 'es6-promise';
-import * as qs     from 'qs';
+import * as qs from 'qs';
 
 /**
  * wrapper class of fetch API
