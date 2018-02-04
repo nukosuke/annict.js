@@ -45,7 +45,7 @@ annict.OAuth.token(
 .then(response => response.json())
 .then(token => {
 
-  annict.client.setHeader('Authorization', `Bearer ${token.access_token}`);
+  annict.client.setToken(token.access_token);
 
   annict.Work.get({ filter_title: 'shirobako' })
   .then(response => response.json())
