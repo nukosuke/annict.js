@@ -4,7 +4,7 @@ module.exports = {
     entry: './src/annict-browser.js',
     output: {
         filename: 'annict.min.js',
-        path: './browser',
+        path: __dirname + '/browser',
         libraryTarget: 'var',
         library: 'Annict'
     },
