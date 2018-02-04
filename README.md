@@ -80,6 +80,6 @@ Available methods are partly differ between Node.js and browser.
 - https://github.com/nukosuke/annict.js/pull/25#issue-160690355
 
 ## License
-Copyright (c) 2017 nukosuke  
+Copyright (c) 2018 nukosuke  
 This software is licensed under MIT license.
 http://opensource.org/licenses/mit-license.php
