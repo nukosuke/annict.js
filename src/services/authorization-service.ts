@@ -1,4 +1,3 @@
-import { Promise }    from 'es6-promise';
 import { HttpClient } from '../http-client';
 import { Scope }      from '../string-literal';
 import * as qs        from 'qs';
