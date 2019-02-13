@@ -58,7 +58,7 @@
     "build:tsd": "tsc -p tsconfig.json -d",
     "docs": "typedoc --mode file --readme none --target ES5 --out ./docs",
     "lint": "tslint -c tslint.json './src/**/*.ts'",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "test": "npm run test:main && npm run test:browser",
     "test:browser": "karma start",
     "test:main": "mocha './test/**/*.spec.js' -r ./test/globals --recursive"
