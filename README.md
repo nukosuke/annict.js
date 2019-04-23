@@ -1,3 +1,12 @@
+# Notice
+
+Annict maintainer announced REST API as deprecated.
+https://twitter.com/shimbaco/status/1117113862514335744?s=20
+
+This library is no longer maintained. Please use GraphQL instead.
+https://developers.annict.jp/graphql-api/
+
+
 [![npm version](https://badge.fury.io/js/annict.svg)](https://badge.fury.io/js/annict)
 [![Bower version](https://badge.fury.io/bo/annict.svg)](https://badge.fury.io/bo/annict)
 [![Build Status](https://travis-ci.org/nukosuke/annict.js.svg?branch=develop)](https://travis-ci.org/nukosuke/annict.js)
